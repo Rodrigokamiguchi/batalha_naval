@@ -31,7 +31,7 @@ Entre no diretório do projeto:
 
 Certifique-se de que você tem tudo instalado:
 
-pip install -r requirements.txt
+?
 
 Execute o jogo:
 
