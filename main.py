@@ -10,13 +10,6 @@ pygame.display.set_caption("Batalha Naval")
 icon = pygame.image.load("imagen/icon.png")
 pygame.display.set_icon(icon)
 
-# Inicialização do mixer
-pygame.mixer.init()
-
-# Carregar sons
-hit_sound = pygame.mixer.Sound("sounds/hit_sound.wav")
-error_sound = pygame.mixer.Sound("sounds/error_sound.wav")
-
 # Cores
 BLACK = (0, 0, 0)
 BLUE = (135, 206, 250)
@@ -25,12 +18,12 @@ GREEN = (0, 255, 0)
 COLOR_TEXT = (0, 0, 0)  # Cor para letras e números
 
 class Ship:
-    """Classe que representa um navio."""
+    """Classe que representa um navio.""" 
     def __init__(self, position):
         self.position = position
 
 class Board:
-    """Classe que representa o tabuleiro do jogo."""
+    """Classe que representa o tabuleiro do jogo.""" 
     def __init__(self):
         self.grid_size = 10
         self.cell_size = WIDTH // self.grid_size
@@ -42,21 +35,19 @@ class Board:
         """Desenha o tabuleiro e os navios.""" 
         font = pygame.font.Font(None, 36)
 
-        # Desenha letras ao lado do tabuleiro
+        # Desenha letras ao lado do tabuleiro (lado esquerdo)
         for y in range(self.grid_size):
-            letter_text = font.render(chr(65 + y), True, COLOR_TEXT)
+            letter_text = font.render(chr(65 + y), True, COLOR_TEXT)  # 'A' é 65 em ASCII
             screen.blit(letter_text, (5, y * self.cell_size + self.cell_size // 2 - letter_text.get_height() // 2))
 
         # Desenha o tabuleiro
         for x in range(self.grid_size):
             for y in range(self.grid_size):
                 rect = pygame.Rect(x * self.cell_size, y * self.cell_size, self.cell_size, self.cell_size)
-                pygame.draw.rect(screen, BLACK, rect, 1)
+                pygame.draw.rect(screen, BLACK, rect, 1)  # Desenha a grade
 
                 if (x, y) in self.hit_ships:  # Se a posição está na lista de acertos
                     pygame.draw.rect(screen, RED, rect)  # Marca como atingido
-                    # Se quiser adicionar um efeito visual de pulso:
-                    pygame.draw.rect(screen, (255, 0, 0, 128), rect.inflate(10, 10), 3)  # Pulsação
 
         # Desenha números abaixo do tabuleiro
         for x in range(self.grid_size):
@@ -146,24 +137,23 @@ class Game:
         """Processa a entrada do jogador.""" 
         if self.player_input:
             try:
+                # Converte a entrada para índices de grade
                 column = ord(self.player_input[0].upper()) - ord('A')
                 row = int(self.player_input[1]) - 1
 
                 if 0 <= column < self.board.grid_size and 0 <= row < self.board.grid_size:
                     if (column, row) in [(s.position) for s in self.board.ships]:
-                        self.board.hit_ships.append((column, row))
+                        self.board.hit_ships.append((column, row))  # Adiciona a posição do navio acertado
                         self.board.ships = [s for s in self.board.ships if s.position != (column, row)]
-                        self.scoreboard.update_score(1)
-                        hit_sound.play()  # Toca som de acerto
+                        self.scoreboard.update_score(1)  # Adiciona um ponto por acerto
                         if len(self.board.ships) == 0:
-                            self.game_over = True
+                            self.game_over = True  # Finaliza o jogo
                     else:
-                        error_sound.play()  # Toca som de erro
-                        self.scoreboard.update_errors()
+                        self.scoreboard.update_errors()  # Atualiza o contador de erros
                 else:
                     print("Entrada inválida.")
             except (ValueError, IndexError):
-                print("Entrada inválida.")
+                print("Entrada inválida. Tente novamente com formato correto (ex: A1).")
 
         self.player_input = ""  # Reseta a entrada após o processamento
 
@@ -181,28 +171,26 @@ class Game:
                     elif event.key == pygame.K_RETURN:
                         self.process_player_input()  # Processa a entrada do jogador
                     elif event.key == pygame.K_BACKSPACE:
-                        self.player_input = self.player_input[:-1]  # Remove o último caractere
-                    elif event.unicode and (event.unicode.isalpha() or event.unicode.isdigit()):
-                        self.player_input += event.unicode  # Adiciona caractere à entrada
+                        self.player_input = self.player_input[:-1]  # Apaga o último caractere
+                    else:
+                        self.player_input += event.unicode.upper()  # Adiciona o caractere pressionado à entrada
 
-            screen.fill(BLUE)  # Limpa a tela
+            screen.fill(BLUE)  # Preenche a tela com a cor de fundo
             self.board.draw()  # Desenha o tabuleiro
-            self.scoreboard.draw(screen)  # Desenha o placar
+            self.scoreboard.draw(screen)  # Desenha a pontuação e erros
             self.display_player_input()  # Exibe a entrada do jogador
-
             if self.game_over:
-                self.show_victory_message()  # Mostra mensagem de vitória
-
+                self.show_victory_message()  # Exibe a mensagem de vitória
             pygame.display.flip()  # Atualiza a tela
 
     def reset_game(self):
-        """Reinicia o jogo.""" 
+        """Reseta o estado do jogo para a próxima partida.""" 
         self.board = Board()
         self.scoreboard = Scoreboard()
-        self.player_input = ""
         self.game_over = False
 
-# Iniciar o jogo
+# Instanciando o jogo e rodando
 game = Game()
 game.run()
+
 pygame.quit()
