@@ -1,61 +1,54 @@
-Jogo Batalha Naval
+<h1 align="center"> Jogo Batalha Naval </h1>
 
 Descrição : Este jogo de Batalha Nava que foi desenvolvido em Python usando a biblioteca Pygame é um jogo que permite ao jogador tentar acertar os navios escondidos no tabuleiro do adversário. Com um sistema de pontuação e sons de feedback para acertos e erros, o objetivo é afundar todos os navios adversários.
 
-1 Funcionalidades do Jogo
+<h1 align="center"> Funcionalidades do Jogo </h1>
 
-Jogo de Turnos: O jogador escolhe posições no tabuleiro e tenta localizar e afundar os navios do adversário.
-Sistema de Pontuação e Contagem de Erros: O placar exibe a pontuação do jogador e o número de tentativas incorretas.
-Feedback Sonoro: Sons de acerto e erro são reproduzidos para melhorar a experiência do jogador.
-Interface de Texto: Exibe letras e números para facilitar o posicionamento dos tiros.
+<p> Jogo de Turnos: O jogador escolhe posições no tabuleiro e tenta localizar e afundar os navios do adversário. <br>
+<p> Sistema de Pontuação e Contagem de Erros: O placar exibe a pontuação do jogador e o número de tentativas incorretas. <br>
+<p> Interface de Texto: Exibe letras e números para facilitar o posicionamento dos tiros. <br>
 
-2 O que foi utilizado:
+<h1 align="center"> O que foi utilizado </h1>
 
-Python: Linguagem de programação principal.
-Pygame: Biblioteca utilizada para a criação da interface gráfica e para tocar sons.
+<p> Python: Linguagem de programação principal. <br>
+<p> Pygame: Biblioteca utilizada para a criação da interface gráfica. <br>
 
-3 Requisitos:
+<h1 align="center"> Requisitos </h1>
 
-Python 3.13.0
-Pygame: Para instalar, execute pip install pygame no terminal.
+<p> Python 3.13.0 <br>
+<p> Pygame: Para instalar, execute pip install pygame no terminal. <br>
 
-4 Como Executar :
+<h1 align="center"> Como Executar </h1>
 
-Copie o repositório:
+<p> Copie o repositório: <br>
 
 https://github.com/Rodrigokamiguchi/batalha_naval/tree/batalha_naval
 
-Entre no diretório do projeto:
+<p> Entre no diretório do projeto: <br>
 
 ?
 
-Certifique-se de que você tem tudo instalado:
+<p> Certifique-se de que você tem tudo instalado: <br>
 
 ?
 
-Execute o jogo:
+<p> Execute o jogo: <br>
 
 main.py
 
-5 Instruções do Jogo:
+<h1 align="center"> Instruções do Jogo </h1>
 
-Objetivo: Afundar todos os navios do adversário antes de esgotar as tentativas.
-Entrada do Jogador: Digite a letra e o número da posição onde deseja atacar (por exemplo, "A3") e pressione Enter.
+<p> Objetivo: Afundar todos os navios do adversário antes de esgotar as tentativas. <br>
+<p> Entrada do Jogador: Digite a letra e o número da posição onde deseja atacar (por exemplo, "A3") e pressione Enter. <br>
+<p> Fim do Jogo: O jogo termina quando todos os navios são afundados. <br>
 
-6 Feedback Sonoro:
+<h1 align="center"> Estrutura do Código </h1>
 
-Som de acerto: quando o jogador acerta um navio.
-Som de erro: quando o jogador atinge uma célula sem navio.
-
-7 Fim do Jogo: O jogo termina quando todos os navios são afundados.
-
-8 Estrutura do Código:
-
-main.py: Arquivo principal que inicia o jogo e controla o loop principal.
-Ship: Classe que representa um navio.
-Board: Classe que representa o tabuleiro e gerencia o posicionamento e o desenho dos navios.
-Scoreboard: Classe que gerencia o placar e exibe a pontuação e contagem de erros do jogador.
-Game: Classe principal que controla a lógica do jogo e a interação com o jogador.
+<p> main.py: Arquivo principal que inicia o jogo e controla o loop principal. <br>
+<p> Ship: Classe que representa um navio. <br>
+<p> Board: Classe que representa o tabuleiro e gerencia o posicionamento e o desenho dos navios. <br>
+<p> Scoreboard: Classe que gerencia o placar e exibe a pontuação e contagem de erros do jogador. <br>
+<p> Game: Classe principal que controla a lógica do jogo e a interação com o jogador. <br>
 
 
 Bibliografia:
