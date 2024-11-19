@@ -19,12 +19,9 @@ GREEN = (0, 255, 0)
 COLOR_TEXT = (0, 0, 0)  # Cor para letras e números
 
 # Sons
-sound_hit = pygame.mixer.Sound("sons/hit.wav")
+sound_hit = pygame.mixer.Sound("sons/background_music.mp3")
 sound_miss = pygame.mixer.Sound("sons/miss.mp3")
-sound_bg = pygame.mixer.Sound("sons/background_music.mp3")
 
-# Tocando a música de fundo em loop
-sound_bg.play(loops=-1)
 
 class Ship:
     """Classe que representa um navio.""" 
