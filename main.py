@@ -172,7 +172,7 @@ class Game:
 
     def show_explosion(self, position):
         """Exibe uma animação de explosão na posição fornecida.""" 
-        explosion_img = pygame.image.load("imagens/explosao.png")
+        explosion_img = pygame.image.load("imagen/explosao.jpg")
         rect = pygame.Rect(position[0] * self.board.cell_size, position[1] * self.board.cell_size, self.board.cell_size, self.board.cell_size)
         for i in range(10):
             screen.blit(explosion_img, rect)
