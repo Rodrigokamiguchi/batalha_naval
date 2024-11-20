@@ -4,7 +4,7 @@ import random
 # Inicialização do Pygame e mixer para sons
 pygame.init()
 pygame.mixer.init()
-WIDTH, HEIGHT = 800, 800
+WIDTH, HEIGHT = 600, 600
 GRID_OFFSET = 50  # Espaço adicional para mostrar letras e números fora do tabuleiro
 screen = pygame.display.set_mode((WIDTH + GRID_OFFSET, HEIGHT + GRID_OFFSET))
 pygame.display.set_caption("Batalha Naval")
