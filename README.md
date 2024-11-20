@@ -1,47 +1,127 @@
-<h1 align="center"> Jogo Batalha Naval </h1>
+# Batalha Naval (Battleship Game)
 
-Descrição : Este jogo de Batalha Nava que foi desenvolvido em Python usando a biblioteca Pygame é um jogo que permite ao jogador tentar acertar os navios escondidos no tabuleiro do adversário. Com um sistema de pontuação e sons de feedback para acertos e erros, o objetivo é afundar todos os navios adversários.
+## 2. Desenvolvimento do Jogo
 
-<h1 align="center"> Funcionalidades do Jogo </h1>
+### Definição do Tema
+Um jogo de Batalha Naval desenvolvido em Python, onde o jogador tenta afundar navios adversários em um tabuleiro de 10x10, utilizando coordenadas para disparar.
 
-<p> Jogo de Turnos: O jogador escolhe posições no tabuleiro e tenta localizar e afundar os navios do adversário. <br>
-<p> Sistema de Pontuação e Contagem de Erros: O placar exibe a pontuação do jogador e o número de tentativas incorretas. <br>
-<p> Interface de Texto: Exibe letras e números para facilitar o posicionamento dos tiros. <br>
+### Planejamento do Desenvolvimento
 
-<h1 align="center"> O que foi utilizado </h1>
+#### Cronograma de Desenvolvimento
+| Período | Etapa | Descrição | Status |
+|---------|-------|-----------|--------|
+| 11/11/2024 | Concepção Inicial | Definição do conceito do jogo de Batalha Naval | Concluído |
+| 12/11/2024 | Desenvolvimento da Interface Básica | Criação do tabuleiro e mecânicas iniciais | Concluído |
+| 13/11/2024 | Implementação de Funcionalidades | 
+- Sistema de pontuação
+- Mecânicas de jogo
+- Tratamento de entrada do jogador | Concluído |
+| 14/11/2024 | Adição de Recursos Avançados | 
+- Efeitos sonoros
+- Animações de acerto e erro
+- Refinamento da interface | Concluído |
+| 15/11/2024 | Testes Finais e Documentação | 
+- Teste completo do jogo
+- Documentação final
+- Preparação para entrega | Concluído |
 
-<p> Python: Linguagem de programação principal. <br>
-<p> Pygame: Biblioteca utilizada para a criação da interface gráfica. <br>
+#### Contexto de Desenvolvimento
+O desenvolvimento deste projeto apresentou características únicas:
+- **Abordagem Livre:** O projeto foi construído sem um planejamento inicial rígido
+- **Desenvolvimento Orgânico:** As funcionalidades foram adicionadas de forma incremental
+- **Desafios:** 
+  * Adaptação constante durante o desenvolvimento
+  * Implementação de recursos sem um escopo previamente definido
+  * Aprendizado na construção do jogo
 
-<h1 align="center"> Requisitos </h1>
+### Metodologia de Desenvolvimento
+- **Abordagem Experimental:** Desenvolvimento iterativo sem um plano detalhado prévio
+- **Aprendizado Contínuo:** Cada etapa representou uma oportunidade de descoberta e implementação
+- **Flexibilidade:** Capacidade de adaptar e modificar o projeto conforme necessário
 
-<p> Python 3.13.0 <br>
-<p> Pygame: Para instalar, execute pip install pygame no terminal. <br>
+### Desenvolvimento
+O jogo foi desenvolvido seguindo uma abordagem modular, com classes separadas para:
+- `Ship`: Representação dos navios
+- `Board`: Gerenciamento do tabuleiro de jogo
+- `Scoreboard`: Controle de pontuação e erros
+- `Game`: Lógica principal do jogo
 
-<h1 align="center"> Como Executar </h1>
+### Testes
+- Verificação de posicionamento correto dos navios
+- Validação das entradas do jogador
+- Teste de mecânicas de pontuação
+- Verificação de condições de fim de jogo
 
-<p> 1. Instale o Python 3.13.0 <br>
-<p> 2. Instale Pygame: pip install pygame <br>
-<p> 3. Clone o repositório <br>
-<p> 4. Execute: python main.py <br>
+## 3. Tecnologias Utilizadas
 
-<h1 align="center"> Instruções do Jogo </h1>
+### Linguagens
+- **Linguagem Principal:** Python 3
 
-<p> Objetivo: Afundar todos os navios do adversário antes de esgotar as tentativas. <br>
-<p> Entrada do Jogador: Digite a letra e o número da posição onde deseja atacar (por exemplo, "A3") e pressione Enter. <br>
-<p> Fim do Jogo: O jogo termina quando todos os navios são afundados. <br>
+### Bibliotecas e Ferramentas
+- **Pygame:** Biblioteca para desenvolvimento de interface gráfica e jogos
 
-<h1 align="center"> Estrutura do Código </h1>
+## 4. Complexidade do Jogo
 
-<p> main.py: Arquivo principal que inicia o jogo e controla o loop principal. <br>
-<p> Ship: Classe que representa um navio. <br>
-<p> Board: Classe que representa o tabuleiro e gerencia o posicionamento e o desenho dos navios. <br>
-<p> Scoreboard: Classe que gerencia o placar e exibe a pontuação e contagem de erros do jogador. <br>
-<p> Game: Classe principal que controla a lógica do jogo e a interação com o jogador. <br>
+### Análise de Algoritmos
+- **Geração de Tabuleiro:** 
+  * Algoritmo de posicionamento aleatório de navios
+  * Complexidade: O(n), com verificações de sobreposição
+- **Processamento de Entrada:** 
+  * Conversão de coordenadas alfanuméricas
+  * Verificação de acerto/erro
+  * Complexidade: O(1)
 
+### Gestão da Complexidade
+- Uso de classes para modularização
+- Métodos específicos para cada funcionalidade
+- Tratamento de exceções para entradas inválidas
+- Algoritmo de geração de navios com limite de tentativas
 
-<h1 align="center"> Bibliografia </h1>
+## 5. Regras do Jogo (Jogabilidade)
 
+### Objetivo
+Afundar todos os navios do tabuleiro com o mínimo de tentativas possível.
+
+### Instruções para Jogadores
+1. **Tabuleiro:** Grade 10x10 com coordenadas de A1 a J10
+2. **Entrada de Jogada:** 
+   - Digite a coordenada desejada (ex: A3)
+   - Pressione Enter para confirmar
+3. **Feedback:**
+   - Acerto: Quadrado fica vermelho, som de explosão
+   - Erro: Contagem de erros aumenta, som de erro
+4. **Pontuação:**
+   - Cada navio afundado: +1 ponto
+   - Número de erros registrados
+5. **Fim de Jogo:** 
+   - Afundar todos os navios
+   - Opção de reiniciar após vitória
+
+### Navios no Jogo
+- 4 navios de 1 célula
+- 1 navio de 2 células
+
+### Limitações
+- Máximo de tentativas não definido
+- Interface simples, foco na jogabilidade
+
+## Recursos Adicionais
+- Efeitos sonoros para acertos e erros
+- Animação de explosão ao acertar um navio
+- Placar com pontuação e contagem de erros
+
+## Requisitos para Execução
+- Python
+- Biblioteca Pygame
+- Conteúdo do jogo _clonado_ do GitHub
+
+## Como Executar
+1. Instale o Python 3
+2. Instale Pygame: `pip install pygame`
+3. Clone o repositório
+4. Execute: `python main.py`
+
+## Referências
 De Souza, D. W. (n.d.). Batalha-Naval-Python: Jogo Batalha Naval Feito em Linguagem Python.
 
 PYGAME. Pygame Documentation. 2023. Disponível em: https://www.pygame.org/docs/. Acesso em: 08 nov. 2024.
