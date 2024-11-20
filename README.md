@@ -20,21 +20,10 @@ Descrição : Este jogo de Batalha Nava que foi desenvolvido em Python usando a 
 
 <h1 align="center"> Como Executar </h1>
 
-<p> Copie o repositório: <br>
-
-https://github.com/Rodrigokamiguchi/batalha_naval/tree/batalha_naval
-
-<p> Entre no diretório do projeto: <br>
-
-?
-
-<p> Certifique-se de que você tem tudo instalado: <br>
-
-?
-
-<p> Execute o jogo: <br>
-
-main.py
+<p> 1. Instale o Python 3.13.0 <br>
+<p> 2. Instale Pygame: pip install pygame <br>
+<p> 3. Clone o repositório <br>
+<p> 4. Execute: python main.py <br>
 
 <h1 align="center"> Instruções do Jogo </h1>
 
