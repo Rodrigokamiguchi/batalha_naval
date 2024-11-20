@@ -1,6 +1,6 @@
 # Batalha Naval (Battleship Game)
 
-## 2. Desenvolvimento do Jogo
+## Desenvolvimento do Jogo
 
 ### Definição do Tema
 Um jogo de Batalha Naval desenvolvido em Python, onde o jogador tenta afundar navios adversários em um tabuleiro de 10x10, utilizando coordenadas para disparar.
@@ -52,7 +52,7 @@ O jogo foi desenvolvido seguindo uma abordagem modular, com classes separadas pa
 - Teste de mecânicas de pontuação
 - Verificação de condições de fim de jogo
 
-## 3. Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Linguagens
 - **Linguagem Principal:** Python 3
@@ -60,7 +60,7 @@ O jogo foi desenvolvido seguindo uma abordagem modular, com classes separadas pa
 ### Bibliotecas e Ferramentas
 - **Pygame:** Biblioteca para desenvolvimento de interface gráfica e jogos
 
-## 4. Complexidade do Jogo
+## Complexidade do Jogo
 
 ### Análise de Algoritmos
 - **Geração de Tabuleiro:** 
@@ -77,7 +77,7 @@ O jogo foi desenvolvido seguindo uma abordagem modular, com classes separadas pa
 - Tratamento de exceções para entradas inválidas
 - Algoritmo de geração de navios com limite de tentativas
 
-## 5. Regras do Jogo (Jogabilidade)
+## Regras do Jogo (Jogabilidade)
 
 ### Objetivo
 Afundar todos os navios do tabuleiro com o mínimo de tentativas possível.
