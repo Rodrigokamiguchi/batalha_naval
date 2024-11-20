@@ -40,7 +40,7 @@ Descrição : Este jogo de Batalha Nava que foi desenvolvido em Python usando a 
 <p> Game: Classe principal que controla a lógica do jogo e a interação com o jogador. <br>
 
 
-Bibliografia:
+<h1 align="center"> Bibliografia </h1>
 
 De Souza, D. W. (n.d.). Batalha-Naval-Python: Jogo Batalha Naval Feito em Linguagem Python.
 
