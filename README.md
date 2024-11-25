@@ -143,3 +143,10 @@ DEV.TO. Game Development with Python. Disponível em: https://dev.to/. Acesso em
 OPENGAMEART. OpenGameArt.org. Disponível em: https://opengameart.org/. Acesso em: 08 nov. 2024.
 
 FREESOUND. FreeSound.org. Disponível em: https://freesound.org/. Acesso em: 08 nov. 2024.
+
+##PARTICIPANTES
+-Rodrigo Guilherme (
+-Leonardo Teodoro (
+-Elias Rozal De Carvalho (
+-Mateus Rian (
+-Maurício (
