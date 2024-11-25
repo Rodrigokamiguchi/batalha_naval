@@ -146,7 +146,7 @@ FREESOUND. FreeSound.org. Disponível em: https://freesound.org/. Acesso em: 08 
 
 ## PARTICIPANTES
 - Rodrigo Guilherme ( https://github.com/Rodrigokamiguchi )
-- Leonardo Teodoro ( https://github.com/imponateao )
+- Leonardo Teodoro ( https://github.com/imponateado )
 - Elias Rozal De Carvalho ( https://github.com/Elias-RDC )
 - Mateus Rian ( https://github.com/MateuSpatano )
 - Maurício ( https://github.com/VinteFaces )
