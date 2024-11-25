@@ -144,7 +144,7 @@ OPENGAMEART. OpenGameArt.org. Disponível em: https://opengameart.org/. Acesso e
 
 FREESOUND. FreeSound.org. Disponível em: https://freesound.org/. Acesso em: 08 nov. 2024.
 
-##PARTICIPANTES
+## PARTICIPANTES
 - Rodrigo Guilherme ( https://github.com/Rodrigokamiguchi )
 - Leonardo Teodoro ( https://github.com/imponateao )
 - Elias Rozal De Carvalho ( https://github.com/Elias-RDC )
